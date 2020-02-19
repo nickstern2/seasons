@@ -3,6 +3,7 @@ import React from 'react';
 
 // import ReactDOM from 'react-dom';
 
+// config
 const seasonConfig = {
   summer: {
     text: "Let's hit the beach!",
@@ -13,6 +14,7 @@ const seasonConfig = {
     iconName: 'snowflake'
   }
 }
+// Helper function
 const getSeason = (lat, month) => {
   if(month > 2 && month < 9) {
     return lat > 0 ? 'summer' : 'winter';
@@ -21,6 +23,7 @@ const getSeason = (lat, month) => {
   }
 }
 
+// functional component
 const SeasonDisplay = (props) => {
   const season = getSeason(props.lat, new Date().getMonth());
   // replaced with seasonConfig
